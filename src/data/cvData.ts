@@ -18,6 +18,12 @@ export interface Education {
   period: string
 }
 
+export interface Certificate {
+  name: string
+  code: string
+  credentialUrl: string
+}
+
 export interface Skill {
   icon: SkillIconName
   name: string
@@ -67,6 +73,19 @@ export const education: Education = {
   degree: 'Bachelor of Engineering, Software Engineering',
   period: 'Sep 2017 - Sep 2022',
 }
+
+export const certificates: readonly Certificate[] = [
+  {
+    name: 'Microsoft Azure Fundamentals',
+    code: 'AZ-900',
+    credentialUrl: 'https://learn.microsoft.com/en-us/users/hoang-rasta/credentials/b062def320a76e4c',
+  },
+  {
+    name: 'GitHub Copilot',
+    code: 'GH-300',
+    credentialUrl: 'https://learn.microsoft.com/en-us/users/hoang-rasta/credentials/d25be747d63b4014',
+  },
+]
 
 export const experiences: readonly Experience[] = [
   {

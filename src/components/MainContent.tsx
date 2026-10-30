@@ -1,5 +1,7 @@
 import Image from "next/image";
 import {
+  ArrowUpRight,
+  Award,
   BriefcaseBusiness,
   Code2,
   GraduationCap,
@@ -8,6 +10,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
+  certificates,
   education,
   experiences,
   skills,
@@ -171,6 +174,49 @@ export default function MainContent() {
       </section>
 
       <section
+        id="certificates"
+        data-section="certificates"
+        className="section-reveal border-b border-white/10 p-6 sm:p-10 lg:p-14"
+        aria-labelledby="certificates-title"
+      >
+        <SectionHeading
+          icon={Award}
+          eyebrow="04 / Certificates"
+          title="Professional Certifications"
+          id="certificates-title"
+        />
+        <div className="grid gap-4 sm:grid-cols-2">
+          {certificates.map((certificate) => (
+            <a
+              key={certificate.code}
+              href={certificate.credentialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-neon/40 hover:bg-white/[0.06]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-lilac">
+                    {certificate.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-zinc-400">
+                    {certificate.code}
+                  </p>
+                </div>
+                <ArrowUpRight
+                  className="h-5 w-5 shrink-0 text-neon transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </div>
+              <p className="mt-auto text-sm font-medium text-neon">
+                View credential
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section
         id="skills"
         data-section="skills"
         className="section-reveal p-6 sm:p-10 lg:p-14"
@@ -178,7 +224,7 @@ export default function MainContent() {
       >
         <SectionHeading
           icon={Code2}
-          eyebrow="04 / Skills & Tools"
+          eyebrow="05 / Skills & Tools"
           title="Technologies I work with."
           id="skills-title"
         />

@@ -170,8 +170,8 @@ a:focus-visible {
 }
 
 ::selection {
-  background: var(--accent);
-  color: #D3C3EE;
+  background: #7c3aed;
+  color: #ffffff;
 }
 
 @layer utilities {

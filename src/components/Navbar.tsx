@@ -1,5 +1,5 @@
 'use client'
-import { BriefcaseBusiness, FileText, Home, UserRound, Wrench } from 'lucide-react'
+import { Award, BriefcaseBusiness, FileText, Home, UserRound, Wrench } from 'lucide-react'
 import { useEffect, useRef, useState, type MouseEvent } from 'react'
 
 const tabs = [
@@ -7,6 +7,7 @@ const tabs = [
   { label: 'About', href: '#about', icon: UserRound },
   { label: 'Resume', href: '#resume', icon: FileText },
   { label: 'Education', href: '#education', icon: BriefcaseBusiness },
+  { label: 'Certificates', href: '#certificates', icon: Award },
   { label: 'Skills', href: '#skills', icon: Wrench },
 ]
 
